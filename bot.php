@@ -17,7 +17,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Text execute
-			/*if ($text == "สวัสดี"){
+			if ($text == "สวัสดี"){
 				$resmes = "สวัสดีครับ"
 			}
 			elseif ($text == "ลาก่อน"){
@@ -28,11 +28,11 @@ if (!is_null($events['events'])) {
 			}
 			else {
 				$resmes = "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
-			}*/
+			}
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $resmes
 			];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
