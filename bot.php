@@ -13,7 +13,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
-			$command = "LANG=th_TH.UTF-8 PYTHONIOENCODING=utf-8 python3 ./python/chat.py " . escapeshellarg($text) . " 2>&1";
+			$command = "LANG=th_TH.UTF-8 PYTHONIOENCODING=utf-8 python3 ./python/chat.py " . $text . " 2>&1";
   			$response_message = shell_exec($command);
   			$response_message = trim($response_message);
 			// Get replyToken
