@@ -39,11 +39,11 @@ if (!is_null($events['events'])) {
 				];
 			} elseif ($text == "ขนม") {
 			   $image = [
-				/*'type' => 'image',
+				'type' => 'image',
 				'originalContentUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.jpg',
-    				'previewImageUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.th.jpg'*/
-				'type' => 'text',
-				'text' => 'ว้าาาาา~'
+    				'previewImageUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.th.jpg'
+				/*'type' => 'text',
+				'text' => 'ว้าาาาา~'*/
 				];
 			   $messages = [
 				'type' => 'text',
