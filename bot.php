@@ -15,6 +15,7 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			if ($text == "สวัสดี") {
  			   $response = "สวัสดีครับ";
+			   $response2 = "๊Umibot ยินดีรับใช้ครับผม";
 			} elseif ($text == "ลาก่อน") {
  			   $response = "ไว้เจอกันใหม่ครับผม";
 			} else {
@@ -24,6 +25,12 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			// Build message to reply back
+			if (!is_null($response2)){
+				$message2 = [
+					'type' => 'text'
+					'text' => $response2
+				$response2 = null;
+			}
 			$messages = [
 				'type' => 'text',
 				'text' => $response
@@ -33,7 +40,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => [$messages,$message2],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
