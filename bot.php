@@ -38,11 +38,11 @@ if (!is_null($events['events'])) {
 				'messages' => [$messages]
 				];
 			} elseif ($text == "ขนม") {
-			   $image = [
+			  /* $image = [
 				'type' => 'image',
 				'originalContentUrl' : 'https://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg',
     				'previewImageUrl' : 'http://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg'
-				];
+				];*/
 			   $messages = [
 				'type' => 'text',
 				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย'
