@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages]
 				];
-			} elseif ($text == "ขนม") {
+			}/* elseif ($text == "ขนม") {
 			   $image = [
 				'type' => 'image',
 				'originalContentUrl' : 'https://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg',
@@ -45,14 +45,14 @@ if (!is_null($events['events'])) {
 				];
 			   $messages = [
 				'type' => 'text',
-				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย ><"'
+				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย'
 				];
 				// Data
 			   $data = [
 				'replyToken' => $replyToken,
 				'messages' => [$image,$messages]
 				];
-			} else {
+			} */else {
 			    $messages = [
 				'type' => 'text',
 				'text' => "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
