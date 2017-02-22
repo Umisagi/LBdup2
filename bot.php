@@ -17,17 +17,17 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Text execute
-			/*if ($text == "สวัสดี"){
-				$resmes = "สวัสดีครับ"
+			if ($text == 'สวัสดี'){
+				$resmes = 'สวัสดีครับ'
 			}
-			elseif ($text == "ลาก่อน"){
-				$resmes = "ไว้เจอกันใหม่ครับ"
+			elseif ($text == 'ลาก่อน'){
+				$resmes = 'ไว้เจอกันใหม่ครับ'
 			}
-			elseif ($text == "ขนม"){
-				$resmes = "นี่เลยยย"
+			elseif ($text == 'ขนม'){
+				$resmes = 'นี่เลยยย'
 			}
 			else {
-				$resmes = "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
+				$resmes = 'ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ'
 			}*/
 			// Build message to reply back
 			$messages = [
