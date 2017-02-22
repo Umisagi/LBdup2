@@ -40,7 +40,7 @@ if (!is_null($events['events'])) {
 			} elseif ($text == "ขนม") {
 			   $image =  [
         			'type' => 'image',
-      				'originalContentUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg',
+      				'originalContentUrl' => 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.jpg',
        				'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
      				];
 			   $messages = [
