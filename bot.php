@@ -12,29 +12,45 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			// Get text sent
+			// Get text sent and Build object to reply back
 			$text = $event['message']['text'];
 			if ($text == "สวัสดี") {
  			   $response = "สวัสดีครับ";
+				
+			   $messages = [
+				'type' => 'text',
+				'text' => $response
+				];
 			} elseif ($text == "ลาก่อน") {
  			   $response = "ไว้เจอกันใหม่ครับผม";
+			   
+				$messages = [
+				'type' => 'text',
+				'text' => $response
+				];
+			} elseif ($text == "ขนม") {
+ 			   $response = "ไว้เจอกันใหม่ครับผม";
+			   
+				$messages = [
+				'type' => 'text',
+				'text' => $response
+				];
 			} else {
 			    $response = "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ";
+			    $messages = [
+				'type' => 'text',
+				'text' => $response
+				];
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-			
-			// Build message to reply back
-			$messages = [
-				'type' => 'text',
-				'text' => $response
-			];
+
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => [$messages,"ครับ","ครับ"],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
