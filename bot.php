@@ -14,6 +14,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent and Build object to reply back
 			$text = $event['message']['text'];
+			$replyToken = $event['replyToken'];
 			if ($text == "สวัสดี") {
 			   $messages = [
 				'type' => 'text',
@@ -61,7 +62,7 @@ if (!is_null($events['events'])) {
 				];
 			}
 			// Get replyToken
-			$replyToken = $event['replyToken'];
+			
 
 
 			// Make a POST Request to Messaging API to reply to sender
