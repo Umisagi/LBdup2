@@ -41,7 +41,7 @@ if (!is_null($events['events'])) {
 			   $image = [
 				'type' => 'image',
 				'originalContentUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.jpg',
-    				'previewImageUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.th.jpgg'
+    				'previewImageUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.th.jpg'
 				];
 			   $messages = [
 				'type' => 'text',
