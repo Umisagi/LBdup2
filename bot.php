@@ -13,14 +13,20 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
-			$text = "งง";
+			if ($text == "สวัสดี") {
+ 			   $response = "สวัสดีครับ";
+			} elseif ($text == "ลาก่อน") {
+ 			   $response = "ไว้เจอกันใหม่ครับผม";
+			} else {
+			    $response = "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ";
+			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $response
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
