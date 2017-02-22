@@ -38,11 +38,11 @@ if (!is_null($events['events'])) {
 				'messages' => [$messages]
 				];
 			} elseif ($text == "ขนม") {
-			  /* $image = [
+			   $image = [
 				'type' => 'image',
-				'originalContentUrl' : 'https://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg',
-    				'previewImageUrl' : 'http://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg'
-				];*/
+				'originalContentUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.jpg',
+    				'previewImageUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.th.jpgg'
+				];
 			   $messages = [
 				'type' => 'text',
 				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย'
