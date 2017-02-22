@@ -38,13 +38,11 @@ if (!is_null($events['events'])) {
 				'messages' => [$messages]
 				];
 			} elseif ($text == "ขนม") {
-			   $image = [
-				'type' => 'image',
-				'originalContentUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.jpg',
-    				'previewImageUrl' : 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.th.jpg'
-				/*'type' => 'text',
-				'text' => 'ว้าาาาา~'*/
-				];
+			   $image =  [
+        			'type' => 'image',
+      				'originalContentUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg',
+       				'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
+     				];
 			   $messages = [
 				'type' => 'text',
 				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย'
