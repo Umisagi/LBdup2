@@ -52,7 +52,7 @@ if (!is_null($events['events'])) {
 				// Data
 			   $data = [
 				'replyToken' => $replyToken,
-				'messages' => [$image,$messages]
+				'messages' => [$image]
 				];
 			} else {
 			    $messages = [
