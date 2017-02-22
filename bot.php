@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages]
 				];
-			}/* elseif ($text == "ขนม") {
+			} elseif ($text == "ขนม") {
 			   $image = [
 				'type' => 'image',
 				'originalContentUrl' : 'https://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg',
@@ -50,9 +50,9 @@ if (!is_null($events['events'])) {
 				// Data
 			   $data = [
 				'replyToken' => $replyToken,
-				'messages' => [$image,$messages]
+				'messages' => [$messages]
 				];
-			} */else {
+			} else {
 			    $messages = [
 				'type' => 'text',
 				'text' => "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
