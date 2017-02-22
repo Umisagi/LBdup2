@@ -15,31 +15,49 @@ if (!is_null($events['events'])) {
 			// Get text sent and Build object to reply back
 			$text = $event['message']['text'];
 			if ($text == "สวัสดี") {
- 			   $response = "สวัสดีครับ";
-				
 			   $messages = [
 				'type' => 'text',
-				'text' => $response
+				'text' => "สวัสดีครับ"
+				];
+				// Data
+			   $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages],
 				];
 			} elseif ($text == "ลาก่อน") {
- 			   $response = "ไว้เจอกันใหม่ครับผม";
-			   
-				$messages = [
+			   $messages = [
 				'type' => 'text',
-				'text' => $response
+				'text' => "ไว้เจอกันใหม่ครับผม"
+				];
+				// Data
+			   $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages],
 				];
 			} elseif ($text == "ขนม") {
- 			   $response = "ไว้เจอกันใหม่ครับผม";
-			   
-				$messages = [
+			   $image = [
+				'type' => 'image',
+				'originalContentUrl' : 'https://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg',
+    				'previewImageUrl' : 'http://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg'
+				]
+			   $messages = [
 				'type' => 'text',
-				'text' => $response
+				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย ><"'
+				];
+				// Data
+			   $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$image,$messages],
 				];
 			} else {
-			    $response = "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ";
 			    $messages = [
 				'type' => 'text',
-				'text' => $response
+				'text' => "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
+				];
+				 // Data  
+			    $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages],
 				];
 			}
 			// Get replyToken
@@ -48,10 +66,7 @@ if (!is_null($events['events'])) {
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages,['type' => 'text','text' => "ครับ"]],
-			];
+			
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
