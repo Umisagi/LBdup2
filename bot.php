@@ -84,8 +84,21 @@ if (!is_null($events['events'])) {
 				];
 			} elseif ($text == "โปรโมชัน") {
 			    $messages = [
-				'type' => 'text',
-				'text' => "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
+				"type": "template",
+ 				"altText": "this is a buttons template",
+				"template": {
+      					"type": "buttons",
+      					"thumbnailImageUrl": "https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/pok.jpg",
+					"title": "Menu",
+					"text": "Please select",
+					"actions": [
+						{
+						"type": "uri",
+						"label": "ไปเลือกซื้อกันเลยย~",
+						"uri": "https://www.facebook.com/7ElevenThailand/photos/a.1222459834457794.1073741922.164549953582126/1222459851124459/?type=3&theater"
+						}
+					]
+				}
 				];
 				 // Data  
 			    $data = [
