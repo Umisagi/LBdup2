@@ -17,29 +17,54 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Text execute
-			if ($text == 'สวัสดี'){
-				$resmes = 'สวัสดีครับ'
-			}
-			elseif ($text == 'ลาก่อน'){
-				$resmes = 'ไว้เจอกันใหม่ครับ'
-			}
-			elseif ($text == 'ขนม'){
-				$resmes = 'นี่เลยยย'
-			}
-			else {
-				$resmes = 'ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ'
-			}*/
-			// Build message to reply back
-			$messages = [
+			if ($text == "สวัสดี") {
+			   $messages = [
 				'type' => 'text',
-				'text' => $text
-			];
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
+				'text' => "สวัสดีครับ"
+				];
+				// Data
+			   $data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages]
-			];
+				];
+			} elseif ($text == "ลาก่อน") {
+			   $messages = [
+				'type' => 'text',
+				'text' => "ไว้เจอกันใหม่ครับผม"
+				];
+				// Data
+			   $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages]
+				];
+			} elseif ($text == "ขนม") {
+			   $image = [
+				'type' => 'image',
+				'originalContentUrl' : 'https://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg',
+    				'previewImageUrl' : 'http://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg'
+				];
+			   $messages = [
+				'type' => 'text',
+				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย ><"'
+				];
+				// Data
+			   $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$image,$messages]
+				];
+			} else {
+			    $messages = [
+				'type' => 'text',
+				'text' => "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
+				];
+				 // Data  
+			    $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages]
+				];
+			// Make a POST Request to Messaging API to reply to sender
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
