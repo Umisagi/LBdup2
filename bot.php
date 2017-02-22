@@ -55,7 +55,7 @@ if (!is_null($events['events'])) {
 			} elseif ($text == "อยากกินขนม") {
 			   $image =  [
         			'type' => 'image',
-      				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Corn680.jpg',
+      				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Cornflick.jpg',
        				'previewImageUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Corn240.jpg',
      				];
 			   $messages = [
@@ -70,8 +70,8 @@ if (!is_null($events['events'])) {
 			} elseif ($text == "อยากกินไอติม") {
 			   $image =  [
         			'type' => 'image',
-      				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Walls680',
-       				'previewImageUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Walls240',
+      				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Walls.jpg',
+       				'previewImageUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Walls240.jpg',
      				];
 			   $messages = [
 				'type' => 'text',
