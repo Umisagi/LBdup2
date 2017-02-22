@@ -37,20 +37,60 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages]
 				];
-			} elseif ($text == "ขนม") {
+			} elseif ($text == "อยากกินมันฝรั่ง") {
 			   $image =  [
         			'type' => 'image',
-      				'originalContentUrl' => 'https://www.img.in.th/images/c1a35f0ab6a258c559664111df2774b1.jpg',
-       				'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
+      				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Kara.jpg',
+       				'previewImageUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Kara240.jpg',
      				];
 			   $messages = [
 				'type' => 'text',
-				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย'
+				'text' => 'ถ้าให้แนะนำมันฝรั่งแล้วล่ะก็ ต้องนี่เลย คารามูโจ้ รสฮ็อตชิลลี่ เผ็ด จัดจ้าน ราคาเพียง 20 บาทเท่านั้น'
 				];
 				// Data
 			   $data = [
 				'replyToken' => $replyToken,
-				'messages' => [$image]
+				'messages' => [$image,$messages]
+				];
+			} elseif ($text == "อยากกินขนม") {
+			   $image =  [
+        			'type' => 'image',
+      				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Corn680.jpg',
+       				'previewImageUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Corn240.jpg',
+     				];
+			   $messages = [
+				'type' => 'text',
+				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย ราคาเพียง 20 บาทเท่านั้น!!'
+				];
+				// Data
+			   $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$image,$messages]
+				];
+			} elseif ($text == "อยากกินไอติม") {
+			   $image =  [
+        			'type' => 'image',
+      				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Walls680',
+       				'previewImageUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Walls240',
+     				];
+			   $messages = [
+				'type' => 'text',
+				'text' => 'ถ้าพูดถึงไอศครีม ต้องนี่เลย~ ไอศครีมวอลล์ ช็อคโกนัตตี้ครั้นซ์ ราคาเพียง 79 บาทเท่านั้น!!'
+				];
+				// Data
+			   $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$image,$messages]
+				];
+			} elseif ($text == "โปรโมชัน") {
+			    $messages = [
+				'type' => 'text',
+				'text' => "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
+				];
+				 // Data  
+			    $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages]
 				];
 			} else {
 			    $messages = [
