@@ -12,65 +12,36 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			// Get text sent and Build object to reply back
+			// Get text 
 			$text = $event['message']['text'];
-			$replyToken = $event['replyToken'];
-			if ($text == "สวัสดี") {
-			   $messages = [
-				'type' => 'text',
-				'text' => "สวัสดีครับ"
-				];
-				// Data
-			   $data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-				];
-			} elseif ($text == "ลาก่อน") {
-			   $messages = [
-				'type' => 'text',
-				'text' => "ไว้เจอกันใหม่ครับผม"
-				];
-				// Data
-			   $data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-				];
-			} elseif ($text == "ขนม") {
-			   $image = [
-				'type' => 'image',
-				'originalContentUrl' : 'https://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg',
-    				'previewImageUrl' : 'http://f.ptcdn.info/790/024/000/1414063239-1042371310-o.jpg'
-				]
-			   $messages = [
-				'type' => 'text',
-				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย ><"'
-				];
-				// Data
-			   $data = [
-				'replyToken' => $replyToken,
-				'messages' => [$image,$messages],
-				];
-			} else {
-			    $messages = [
-				'type' => 'text',
-				'text' => "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
-				];
-				 // Data  
-			    $data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-				];
-			}
 			// Get replyToken
-			
-
-
+			$replyToken = $event['replyToken'];
+			// Text execute
+			if ($text == "สวัสดี"){
+				$resmes = "สวัสดีครับ"
+			}
+			elseif ($text == "ลาก่อน"){
+				$resmes = "ไว้เจอกันใหม่ครับ"
+			}
+			elseif ($text == "ขนม"){
+				$resmes = "นี่เลยยย"
+			}
+			else {
+				$resmes = "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
+			}
+			// Build message to reply back
+			$messages = [
+				'type' => 'text',
+				'text' => $resmes
+			];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages]
+			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -79,7 +50,6 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-
 			echo $result . "\r\n";
 		}
 	}
