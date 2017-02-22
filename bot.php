@@ -83,27 +83,19 @@ if (!is_null($events['events'])) {
 				'messages' => [$image,$messages]
 				];
 			} elseif ($text == "โปรโมชัน") {
-			    $messages = [
-				"type": "template",
- 				"altText": "this is a buttons template",
-				"template": {
-      					"type": "buttons",
-      					"thumbnailImageUrl": "https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/pok.jpg",
-					"title": "Menu",
-					"text": "Please select",
-					"actions": [
-						{
-						"type": "uri",
-						"label": "ไปเลือกซื้อกันเลยย~",
-						"uri": "https://www.facebook.com/7ElevenThailand/photos/a.1222459834457794.1073741922.164549953582126/1222459851124459/?type=3&theater"
-						}
-					]
-				}
+			    $image =  [
+        			'type' => 'image',
+      				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/sev.jpg',
+       				'previewImageUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/sev240.jpg',
+     				];
+			   $messages = [
+				'type' => 'text',
+				'text' => 'โปรโมชันสุดคุ้มประจำวันนี้ แค่มีเหรียญก็สามารถแลกสินค้าสุดคุ้มได้ฟรี!!'
 				];
-				 // Data  
-			    $data = [
+				// Data
+			   $data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages]
+				'messages' => [$image,$messages]
 				];
 			} else {
 			    $messages = [
