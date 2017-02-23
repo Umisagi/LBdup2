@@ -27,6 +27,16 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages]
 				];
+			} elseif ($text == "หิวจัง") {
+			   $messages = [
+				'type' => 'text',
+				'text' => "หิวเมื่อไร ก็แวะมา เซเว่นอีเลฟเว่น ^^"
+				];
+				// Data
+			   $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages]
+				];
 			} elseif ($text == "ลาก่อน") {
 			   $messages = [
 				'type' => 'text',
@@ -37,7 +47,7 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages]
 				];
-			} elseif ($text == "อยากกินมันฝรั่ง") {
+			}elseif ($text == "อยากกินมันฝรั่ง") {
 			   $image =  [
         			'type' => 'image',
       				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Kara.jpg',
