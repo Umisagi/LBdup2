@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 			if ($text == "สวัสดี") {
 			   $messages = [
 				'type' => 'text',
-				'text' => "สวัสดีครับ"
+				'text' => "สวัสดีค่ะ Umibot ยินดีรับใช้ค่ะ ><"
 				];
 				// Data
 			   $data = [
@@ -37,10 +37,25 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages]
 				];
+			} elseif ($text == "อรุณสวัสดิ์") {
+			   $image =  [
+        			'type' => 'image',
+      				'originalContentUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Joke.jpg',
+       				'previewImageUrl' => 'https://raw.githubusercontent.com/Umisagi/LBdup2/master/img/Joke240.jpg',
+     				];
+			   $messages = [
+				'type' => 'text',
+				'text' => "อรุณสวัสดิ์ค่าาา~ เช้าๆแบบนี้ รับโจ๊กหมูเซเว่นอุ่นๆไปทานไหมคะ ?"
+				];
+				// Data
+			   $data = [
+				'replyToken' => $replyToken,
+				'messages' => [$image,$messages]
+				];
 			} elseif ($text == "ลาก่อน") {
 			   $messages = [
 				'type' => 'text',
-				'text' => "ไว้เจอกันใหม่ครับผม"
+				'text' => "ไว้เจอกันใหม่นะคะ"
 				];
 				// Data
 			   $data = [
@@ -55,7 +70,7 @@ if (!is_null($events['events'])) {
      				];
 			   $messages = [
 				'type' => 'text',
-				'text' => 'ถ้าให้แนะนำมันฝรั่งแล้วล่ะก็ ต้องนี่เลย คารามูโจ้ รสฮ็อตชิลลี่ เผ็ด จัดจ้าน ราคาเพียง 20 บาทเท่านั้น'
+				'text' => 'ถ้าให้แนะนำมันฝรั่งแล้วล่ะก็ ต้องนี่เลย คารามูโจ้ รสฮ็อตชิลลี่ เผ็ด จัดจ้าน ราคาเพียง 20 บาทเท่านั้นค่ะ'
 				];
 				// Data
 			   $data = [
@@ -70,7 +85,7 @@ if (!is_null($events['events'])) {
      				];
 			   $messages = [
 				'type' => 'text',
-				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย ราคาเพียง 20 บาทเท่านั้น!!'
+				'text' => 'พูดถึงขนม ต้องนี่เลย ขนมข้าวโพดอบกรอบรสนม ตรา 7 Select หอมนุ่มรสนมมากมาย ราคาเพียง 20 บาทเท่านั้นค่ะ!!'
 				];
 				// Data
 			   $data = [
@@ -100,7 +115,7 @@ if (!is_null($events['events'])) {
      				];
 			   $messages = [
 				'type' => 'text',
-				'text' => 'โปรโมชันสุดคุ้มประจำวันนี้ แค่มีเหรียญก็สามารถแลกสินค้าสุดคุ้มได้ฟรี!!'
+				'text' => 'โปรโมชันสุดคุ้มประจำวันนี้ แค่มีเหรียญก็สามารถแลกสินค้าสุดคุ้มได้ฟรีค่ะ!!'
 				];
 				// Data
 			   $data = [
@@ -110,7 +125,7 @@ if (!is_null($events['events'])) {
 			} else {
 			    $messages = [
 				'type' => 'text',
-				'text' => "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยครับ"
+				'text' => "ระบบไม่สามารถประมวลผลคำที่ท่านส่งมาได้ ขออภัยด้วยค่ะ"
 				];
 				 // Data  
 			    $data = [
